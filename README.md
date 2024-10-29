@@ -1,2 +1,34 @@
-# Heart-Disease-Prediction-Web-App
-This project aims to predict heart disease risk using a machine learning model built with Python. Using a dataset sourced from Kaggle, this web app, created with Streamlit, allows users to enter health-related data and receive a prediction on the likelihood of heart disease.
+## Heart Disease Prediction project
+
+### Software And Tools Requirements
+1. [Github Account](https:\\github.com)
+2. [Vs Code IDE](https:\\code.visualstudio.com)
+3. [Git Cli](https:https://git-scm.com/downloads)
+4. []
+
+### Create New Inviroment
+
+```
+conda create -p venv python==3.7 -y
+```
+```
+Activate venv
+myvenv\Scripts\activate  
+```
+
+### Install Reqrequirements.txt
+```
+pip install -r requirements.txt
+```
+
+### Commiting And Pushing Github Repo
+
+```
+git add . # to add all the file in this folder
+```
+```
+git commit -m "commit first"
+```
+```
+git push origin main # then push all the code and file to main origin
+```
