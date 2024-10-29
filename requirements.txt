@@ -1,0 +1,5 @@
+pandas
+streamlit
+scikit-learn
+numpy
+pytest  # If you're using this for testing
