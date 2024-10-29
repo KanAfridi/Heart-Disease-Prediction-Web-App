@@ -1,12 +1,8 @@
 import pytest
 import pandas as pd
 from src.app import predict_heart_disease
-import warnings
-warnings.filterwarnings("ignore", category=UserWarning)
 
-
-
-# Load the model to ensure consistency in predictions
+# Load the model
 import pickle
 pipe = pickle.load(open("GBC_pipeline.pkl", 'rb'))
 

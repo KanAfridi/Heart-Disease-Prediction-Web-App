@@ -34,66 +34,74 @@ def get_user_input():
         sex = st.selectbox('Sex', df['Sex'].unique())
 
         # RestingBP input box
-        RestingBP_input = st.text_input('Resting Blood Pressure', placeholder='Enter your RestingBP')
+        RestingBP_input = st.text_input('RestingBP', placeholder='Enter your RestingBP')
         try:
-            RestingBP = int(RestingBP_input)
+            resting_bp = int(RestingBP_input)
         except ValueError:
-            RestingBP = None
+            resting_bp = df['RestingBP'].mean()
 
         # Cholesterol input box
         #Cholesterol = st.number_input('Cholesterol')
         
         Cholesterol_input = st.text_input('Cholesterol', placeholder='Enter your Cholesterol level')
         try:
-            Cholesterol = int(Cholesterol_input)
+            cholesterol = int(Cholesterol_input)
         except ValueError:
-            Cholesterol = None
+            cholesterol = None
 
         # MaxHR input box
-        MaxHR = st.number_input('MaxHR')
+        MaxHR_input = st.text_input('MaxHR', placeholder='Enter your Cholesterol level')
+        try:
+            max_hr = int(MaxHR_input)
+        except ValueError:
+            max_hr = None
 
     with col2:
         # Sex selectbox
         #sex = st.selectbox('Sex', df['Sex'].unique())
 
         # ChestPainType selectbox
-        ChestPainType = st.selectbox('ChestPainType', df['ChestPainType'].unique())
+        chestpaintype = st.selectbox('ChestPainType', df['ChestPainType'].unique())
 
         # FastingBS selectbox
-        FastingBS = st.selectbox('FastingBS', df['FastingBS'].unique())
+        fasting_bs = st.selectbox('FastingBS', df['FastingBS'].unique())
 
         # RestingECG selectbox
-        RestingECG = st.selectbox('RestingECG', df['RestingECG'].unique())
+        resting_ecg = st.selectbox('RestingECG', df['RestingECG'].unique())
 
         # ExerciseAngina selectbox
-        ExerciseAngina = st.selectbox('ExerciseAngina', df['ExerciseAngina'].unique())
+        exercise_angina = st.selectbox('ExerciseAngina', df['ExerciseAngina'].unique())
         
         # ST_Slope selectbox
-        ST_Slope = st.selectbox('ST_Slope', df['ST_Slope'].unique())
+        st_slope = st.selectbox('ST_Slope', df['ST_Slope'].unique())
 
     # Oldpeak selectbox
-    #Oldpeak = st.selectbox('Oldpeak', df['Oldpeak'].unique())
-    Oldpeak = st.slider('Oldpeak', -2.6, 6.2, 0.0)
+    oldpeak = st.select_slider('Oldpeak', df['Oldpeak'].unique())
+    #oldpeak = st.slider('Oldpeak', -2.6, 6.2, 0.0)
     
     input_data =  {
         'Age': age,
         'Sex': sex,
+        'ChestPainType': chestpaintype,
         'RestingBP': resting_bp,
         'Cholesterol': cholesterol,
         'MaxHR': max_hr,
-        'ChestPainType': chest_pain_type,
+        'ChestPainType': chestpaintype,
         'FastingBS': fasting_bs,
         'RestingECG': resting_ecg,
+        'MaxHR': max_hr,
         'ExerciseAngina': exercise_angina,
         'Oldpeak': oldpeak,
         'ST_Slope': st_slope
     }
+    
+    return input_data
 
 # Define a function to make a prediction
 def predict_heart_disease(input_data):
     query_df = pd.DataFrame([input_data])
-    prediction = pipe.predict(query_df)
-    return prediction[0]  # Returns 1 for "Heart Disease" and 0 for "No Heart Disease"
+    prediction_input = pipe.predict(query_df)
+    return prediction_input[0]  # Returns 1 for "Heart Disease" and 0 for "No Heart Disease"
 
 # Main Streamlit app
 def main():
@@ -109,3 +117,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
