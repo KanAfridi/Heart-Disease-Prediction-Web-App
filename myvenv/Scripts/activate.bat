@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=E:\documents\Done projects\Heart-Diseases-Model\Heart-Disease-Prediction-Web-App\myvenv
+set VIRTUAL_ENV=E:\documents\commited projects\Machine Learning\Heart-Disease-Prediction-Web-App\myvenv
 
 if not defined PROMPT set PROMPT=$P$G
 
