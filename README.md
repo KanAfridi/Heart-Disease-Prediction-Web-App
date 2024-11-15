@@ -9,7 +9,7 @@ Through this project, I aimed to achieve the best possible results, and I succes
 1. [Github Account](https:\\github.com)
 2. [Vs Code IDE](https:\\code.visualstudio.com)
 3. [Git Cli](https:https://git-scm.com/downloads)
-4. []
+4. [soon i'll deploy this on web]
 
 ### Create New Inviroment
 ```
