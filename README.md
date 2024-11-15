@@ -1,6 +1,8 @@
 ## Heart Disease Prediction project
 
+I have been working on this project for quite some time, and it has become one of my favorite projects. It combines multiple skills and tools I’ve learned, including Docker, GitHub Actions, Streamlit for web app development, exploratory data analysis (EDA), and using pickle files to save models and pipelines. I also implemented rigorous testing for the model and application. 
 
+Through this project, I aimed to achieve the best possible results, and I successfully achieved an 86% accuracy for predicting heart disease. This project reflects my dedication to applying and enhancing my data science and software development skills.
 
 
 ### Software And Tools Requirements
@@ -61,6 +63,13 @@ pytest tests\test.py
 ├── requirements.txt  # List of dependencies
 └── Etc..             # Other necessary files
 ```
+
+## ⚙️ What I Have Done So Far:
+1. **Environment Setup:** I’ve set up both virtual and conda environments to ensure the project runs in an isolated setup.
+2. **Dependencies Installation:** I’ve included all the required packages in requirements.txt for easy installation.
+3. **Streamlit App:** The app.py file runs the prediction model using Streamlit. I verified that it works by testing it locally.
+4. **Testing:** I created a tests/ folder to include test files, ensuring the app is working correctly before deployment. The tests are written in test.py.
+5. **GitHub Workflow:** I’ve set up the CI/CD pipeline in .github/workflows/main.yaml. It automates the testing and deployment processes, ensuring the app is always tested on a fresh system.
 
 ## 🔍 Exploratory Data Analysis (EDA)
 
