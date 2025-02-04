@@ -3,6 +3,10 @@ import pickle
 import numpy as np
 import pandas as pd
 
+import os, sys
+# Add project root to Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 # Load the model and DataFrame globally
 pipe = pickle.load(open("GBC_pipeline.pkl", 'rb'))
 df = pickle.load(open("df.pkl", 'rb'))

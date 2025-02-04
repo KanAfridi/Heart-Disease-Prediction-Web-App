@@ -3,6 +3,6 @@ streamlit
 scikit-learn
 xgboost
 numpy
+pytest  # If you're using this for testing
 seaborn
 matplotlib
-pytest  # If you're using this for testing
