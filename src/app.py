@@ -2,10 +2,10 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
-
 import os, sys
+
 # Add project root to Python path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "GBC_pipeline.pkl")
 
 # Load the model and DataFrame globally
 pipe = pickle.load(open("GBC_pipeline.pkl", 'rb'))
